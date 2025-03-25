@@ -1,0 +1,10 @@
+.banner {
+    opacity: 0;
+    transform: scale(1.02);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.banner.active {
+    opacity: 1;
+    transform: scale(1);
+}

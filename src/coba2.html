@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Carousel</title>
+    <style>
+        /* body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a5b1c2;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        } */
+
+        .carousel {
+            overflow: hidden;
+            width: 700px;
+            background-color: #1e272e;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-radius: 5px;
+            box-shadow: 20px 35px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 250px;
+            justify-items: stretch;
+            animation: animation 50s linear infinite; /* Durasi animasi diperpanjang */
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 270px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid #a5b1c2;
+        }
+
+        @keyframes animation {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-10 * 250px)); /* Sesuaikan dengan jumlah gambar */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="image-container">
+            <img src="../img/testimoni/testimoni1.jpg" alt="Gambar 1">
+            <img src="../img/testimoni/testimoni2.jpg" alt="Gambar 2">
+            <img src="../img/testimoni/testimoni3.jpg" alt="Gambar 3">
+            <img src="../img/testimoni/testimoni4.jpg" alt="Gambar 4">
+            <img src="../img/testimoni/testimoni5.jpg" alt="Gambar 5">
+            <img src="../img/testimoni/testimoni6.jpg" alt="Gambar 6">
+            <img src="../img/testimoni/testimoni7.jpg" alt="Gambar 7">
+            <img src="../img/testimoni/testimoni8.jpg" alt="Gambar 8">
+            <img src="../img/testimoni/testimoni9.jpg" alt="Gambar 9">
+            <img src="../img/testimoni/testimoni10.jpg" alt="Gambar 10">
+            <!-- Duplikat gambar untuk efek infinite -->
+            <img src="../img/testimoni/testimoni1.jpg" alt="Gambar 1">
+            <img src="../img/testimoni/testimoni2.jpg" alt="Gambar 2">
+            <img src="../img/testimoni/testimoni3.jpg" alt="Gambar 3">
+            <img src="../img/testimoni/testimoni4.jpg" alt="Gambar 4">
+            <img src="../img/testimoni/testimoni5.jpg" alt="Gambar 5">
+            <img src="../img/testimoni/testimoni6.jpg" alt="Gambar 6">
+            <img src="../img/testimoni/testimoni7.jpg" alt="Gambar 7">
+            <img src="../img/testimoni/testimoni8.jpg" alt="Gambar 8">
+            <img src="../img/testimoni/testimoni9.jpg" alt="Gambar 9">
+            <img src="../img/testimoni/testimoni10.jpg" alt="Gambar 10">
+        </div>
+    </div>
+</body>
+
+</html>

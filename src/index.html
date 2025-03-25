@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+
+    <div id="banner-container">
+        <!-- Banner 1 -->
+        <div class="banner min-h-screen pt-[80px] pb-[10px] bg-gray-200 flex flex-col items-center text-center">
+            <!-- <svg class="absolute top-[0] left-0 w-full z-[1]" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,40 C250,60 350,70 500,40" fill="#969696"></path>
+            </svg> -->
+
+            <h1 class="text-[#2C3E50] text-3xl font-bold">Batik Holiday - Sewa Mobil Mudah & Terpercaya!</h1>
+            <p class="text-[#333333] text-[15px] mt-2 font-serif max-w-[600px]">
+                Tersedia berbagai pilihan kendaraan untuk perjalanan nyaman anda. Kami juga menyediakan paket wisata
+                daerah
+                Medan untuk pengalaman liburan yang tak terlupakan.
+            </p>
+            <a href="daftarRental.html" class="button">
+                <button class="flex bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer  hover:bg-[#ff7f00]
+                   hover:scale-110 hover:shadow-lg transition-transform duration-300 group">
+                    <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                    <p class="text-[#34495E] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                </button>
+            </a>
+
+            <div class="bannerMobil mt-10">
+                <img src="../img/Mobil.png" class="max-w-full h-auto" alt="mobil1">
+            </div>
+            <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-1000,100 C250,20 350,10 600,50 L200,80 L0,80 Z" fill="#969696"></path>
+            </svg>
+            <!-- <button onclick="changeBanner(1)" class="bg-[#E67E22] px-4 py-2 mt-10 rounded-[50px]">Lihat Lainnya</button> -->
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="banner relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center hidden"
+            style="background-image: url('../img/banner/banner2.jpg');">
+
+            <!-- Overlay lebih gelap -->
+            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+            <!-- Content -->
+            <div class="relative max-w-2xl p-6 text-white">
+                <h1 class="text-white text-3xl font-bold">PAKET WISATA MEDAN</h1>
+                <p class="text-white text-[15px] mt-2 font-serif">
+                    Medan adalah destinasi wisata yang kaya akan budaya, kuliner, dan keindahan alam.
+                    Untuk Anda yang ingin menjelajahi pesona kota ini tanpa repot, Rudi Rental Medan
+                    menawarkan berbagai pilihan paket wisata dengan harga terjangkau dan layanan terbaik.
+                    Dengan armada kendaraan yang nyaman serta pemandu wisata berpengalaman, perjalanan
+                    Anda bersama keluarga atau teman akan lebih menyenangkan dan berkesan.
+                    Nikmati pengalaman liburan yang seru di kota yang dikenal sebagai
+                    <i>“Paris van Sumatera”</i> dengan pelayanan profesional dari kami.
+                </p>
+
+                <!-- Tombol dengan warna lebih kontras -->
+                <a href="daftarRental.html" class="button">
+                    <button
+                        class="flex bg-[#fee271] mt-6 inline-flex items-center px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-300 group">
+                        <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                        <p class="text-[#34495E] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Keunggulan bg-gray-50 min-h-screen flex flex-col items-center text-[#2C3E50] p-5">
+        <!-- Judul -->
+        <h3 data-aos="fade-left" class="text-[15px] text-[#333333] text-center font-bold font-serif mt-5">
+            Alasan mengapa harus memilih Rudi Rental Car?
+        </h3>
+        <h1 data-aos="fade-right" class="text-[30px] md:text-[35px] text-center font-bold font-serif mt-2">
+            Keunggulan Rudi Rental Car!
+        </h1>
+
+        <!-- Kontainer utama -->
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mt-10">
+            <!-- Keunggulan di kiri -->
+            <div class="w-full md:w-1/3 space-y-5 text-center md:text-left">
+                <div data-aos="fade-right" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-users text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Layanan dan Tenaga Kerja Profesional</p>
+                </div>
+                <div data-aos="fade-right" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-map-marker-alt text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Paket Destinasi beragam dan terjangkau</p>
+                </div>
+                <div data-aos="fade-right" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-bus text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Armada lengkap dan terawat</p>
+                </div>
+            </div>
+
+            <!-- Gambar Bus -->
+            <div data-aos="zoom-out" class="w-full md:w-1/3 flex justify-center my-5">
+                <img src="../img/Mobil (1).png" class="w-[250px] md:w-[350px] lg:w-[500px] object-contain"
+                    alt="Bus Rental">
+            </div>
+
+            <!-- Keunggulan di kanan -->
+            <div class="w-full md:w-1/3 space-y-5 text-center md:text-left">
+                <div data-aos="fade-left" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-bullhorn text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Menawarkan Rental untuk Segala Kebutuhan</p>
+                </div>
+                <div data-aos="fade-left" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-user-tie text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Driver Berpengalaman dengan Pelayanan Terbaik
+                    </p>
+                </div>
+                <div data-aos="fade-left" class="flex items-center justify-center md:justify-start space-x-2">
+                    <i class="fas fa-check-circle text-lg"></i>
+                    <p class="text-[11px] sm:text-[15px] md:text-[15px]">Pemesanan mudah</p>
+                </div>
+            </div>
+        </div>
+        <p
+            class="flex flex-wrap justify-center items-center text-[14px] sm:text-[16px] md:text-[20px] font-semibold mt-10 px-5 text-center">
+            <span data-aos="fade-right">Nikmati perjalanan Anda dengan nyaman&nbsp;</span>
+            <span data-aos="fade-left">di Kota Medan bersama Rudi Rental Car</span>
+        </p>
+
+
+
+        <!-- <div class="bg-palegoldenrod flex justify-center items-center relative mb-5 mt-10">
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                <svg id="more-arrows" class="w-[75px] h-[65px]">
+                    <polygon class="arrow-top fill-gray opacity-50 transition-all duration-200 ease-out"
+                        points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3"></polygon>
+                    <polygon class="arrow-middle fill-gray opacity-75 transition-all duration-200 ease-out"
+                        points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7"></polygon>
+                    <polygon class="arrow-bottom fill-gray transition-all duration-200 ease-out"
+                        points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1"></polygon>
+                </svg>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Daftar Mobil -->
+    <div class="pilihanMobil min-h-screen bg-gray-200 flex flex-col items-center text-center p-8">
+        <!-- Judul -->
+        <h1 data-aos="zoom-in-right" class="text-[30px] text-[#2C3E50] font-serif font-bold">Pilihan Rental Mobil</h1>
+        <p data-aos="zoom-in-left" class="text-[15px] text-[#333333] max-w-[800px] font-serif mt-2">
+            Rudi Rental Car menawarkan berbagai pilihan kendaraan untuk disewa, mulai dari mobil mewah hingga bus, siap
+            memenuhi segala kebutuhan perjalanan Anda. Temukan mobil terbaik yang sesuai dengan kenyamanan dan gaya
+            perjalanan Anda! Berikut adalah deretan kendaraan unggul yang kami sediakan.
+        </p>
+
+        <!-- Contain Cards -->
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+            <div data-aos="zoom-in-right" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/innova.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Innova Reborn</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2018 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.100.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Innova Reborn')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/avanza.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Avanza </h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2019 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 850.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Avanza')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="zoom-in-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/fortuner.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Fortuner PRZ </h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2020 up
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.500.000 / Hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Fortuner PRZ')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <a href="daftarRental.html" data-aos="fade-up"
+            class="bg-white text-gray-700 mt-6 px-6 py-2 rounded-lg border border-gray-400 shadow-sm">
+            Lihat Lainnya
+        </a>
+    </div>
+
+    <!-- Layanan Yang Ditawarkan -->
+    <div class="pelayanan min-h-auto flex flex-col items-center justify-center pt-10 pb-10 ">
+        <div class="text-center mb-8">
+            <h1 data-aos="fade-right" class="text-[#2C3E50] text-3xl font-bold font-serif">Pelayanan Yang Kami Tawarkan
+            </h1>
+            <p data-aos="fade-left" class="text-gray-600 mt-2">Rudi Rental Car menawarkan berbagai pilihan pelayanan
+                lainnya untuk acara
+                penting Anda! Berikut adalah deretan pelayanan yang kami sediakan.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl w-[250px] sm:w-[400px] md:w-full">
+            <div data-aos="fade-right"
+                class="bg-white p-2 rounded-lg shadow-md flex justify-between items-center cursor-pointer hover:shadow-lg transition">
+                <p class="font-semibold text-lg">Antar Jemput Bandara</p>
+                <span class="text-xl">&#x25B6;</span>
+            </div>
+            <div data-aos="fade-left"
+                class="bg-white p-2 rounded-lg shadow-md flex justify-between items-center cursor-pointer hover:shadow-lg transition">
+                <p class="font-semibold text-lg">Wedding Car</p>
+                <span class="text-xl">&#x25B6;</span>
+            </div>
+            <div data-aos="fade-right"
+                class="bg-white p-2 rounded-lg shadow-md flex justify-between items-center cursor-pointer hover:shadow-lg transition">
+                <p class="font-semibold text-lg">Rental Harian</p>
+                <span class="text-xl">&#x25B6;</span>
+            </div>
+            <div data-aos="fade-left"
+                class="bg-white p-2 rounded-lg shadow-md flex justify-between items-center cursor-pointer hover:shadow-lg transition">
+                <p class="font-semibold text-lg">Graduation Car</p>
+                <span class="text-xl">&#x25B6;</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Promosi -->
+    <div class="bannerPromosi min-h-auto bg-gray-200">
+        <div class="flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-10">
+            <!-- Bagian Teks -->
+            <div class="max-w-[100vh] text-center md:text-left">
+                <h1 data-aos="fade-right"
+                    class="text-[21px] md:text-[44px] sm:text-[32px] text-[#2C3E50] font-bold font-serif mb-4 "
+                    id="textPromosi">
+                    Hubungi kami dan dapatkan penawaran menarik dengan harga yang terjangkau
+                </h1>
+                <h1 data-aos="fade-right" class="text-[18px] md:text-[30px] sm:text-[22px] font-bold text-[#333333]"
+                    id="nomorPromosi">
+                    0812-3456-7891
+                </h1>
+            </div>
+
+            <!-- Bagian Gambar -->
+            <div data-aos="fade-left"
+                class="relative w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0 md:mr-[100px]">
+                <img src="../img/Group 35.png" alt="Mobil" class="relative max-w-full w-[200px] md:w-[650px] h-auto">
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-[#2C3E50] text-3xl font-bold font-serif p-5 text-center bg-gray-50">Testimoni</h1>
+    <!-- Testimoni -->
+    <div class="testimoni bg-gray-200 mb-10">
+        <div class="carousel bg-gray-100">
+            <div class="image-container">
+                <img src="../img/testimoni/testimoni1.jpg" class="testimoni-img" alt="Gambar 1">
+                <img src="../img/testimoni/testimoni2.jpg" class="testimoni-img" alt="Gambar 2">
+                <img src="../img/testimoni/testimoni3.jpg" class="testimoni-img" alt="Gambar 3">
+                <img src="../img/testimoni/testimoni4.jpg" class="testimoni-img" alt="Gambar 4">
+                <img src="../img/testimoni/testimoni5.jpg" class="testimoni-img" alt="Gambar 5">
+                <img src="../img/testimoni/testimoni6.jpg" class="testimoni-img" alt="Gambar 6">
+                <img src="../img/testimoni/testimoni7.jpg" class="testimoni-img" alt="Gambar 7">
+                <img src="../img/testimoni/testimoni8.jpg" class="testimoni-img" alt="Gambar 8">
+                <img src="../img/testimoni/testimoni9.jpg" class="testimoni-img" alt="Gambar 9">
+                <img src="../img/testimoni/testimoni10.jpg" class="testimoni-img" alt="Gambar 10">
+                <!-- Duplikat gambar untuk efek infinite -->
+                <img src="../img/testimoni/testimoni1.jpg" class="testimoni-img" alt="Gambar 1">
+                <img src="../img/testimoni/testimoni2.jpg" class="testimoni-img" alt="Gambar 2">
+                <img src="../img/testimoni/testimoni3.jpg" class="testimoni-img" alt="Gambar 3">
+                <img src="../img/testimoni/testimoni4.jpg" class="testimoni-img" alt="Gambar 4">
+                <img src="../img/testimoni/testimoni5.jpg" class="testimoni-img" alt="Gambar 5">
+                <img src="../img/testimoni/testimoni6.jpg" class="testimoni-img" alt="Gambar 6">
+                <img src="../img/testimoni/testimoni7.jpg" class="testimoni-img" alt="Gambar 7">
+                <img src="../img/testimoni/testimoni8.jpg" class="testimoni-img" alt="Gambar 8">
+                <img src="../img/testimoni/testimoni9.jpg" class="testimoni-img" alt="Gambar 9">
+                <img src="../img/testimoni/testimoni10.jpg" class="testimoni-img" alt="Gambar 10">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+    <footer class="bg-gray-200 py-10">
+        <div
+            class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- About Us -->
+            <div>
+                <h1 class="text-xl font-bold mb-4">About Us</h1>
+                <p class="text-sm text-gray-700">
+                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <br>
+                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h1 class="text-xl font-bold mb-4">Contact Us</h1>
+                <p class="text-sm text-gray-700">
+                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum <br>
+                    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+                </p>
+            </div>
+
+            <!-- Locate Us -->
+            <div>
+                <h1 class="text-xl font-bold mb-4">Locate us</h1>
+                <div class="flex flex-col items-center">
+                    <div class="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl">
+                        <iframe class="w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] border border-black"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=98.34823608398439%2C3.414039337974069%2C98.99093627929689%2C3.876586045755701&amp;layer=mapnik&amp;marker=3.645048588553452%2C98.66949375000002">
+                        </iframe>
+                    </div>
+
+                    <small>
+                        <!-- <a href="https://www.openstreetmap.org/?mlat=3.6450&amp;mlon=98.6695#map=11/3.6450/98.6695&amp;layers=N"
+                            class="text-blue-500 hover:underline hover:cursor-pointer">
+                            Lihat Lokasi
+                        </a> -->
+                        <a href="https://maps.app.goo.gl/swYUZbKEYQSx5XZ3A"
+                            class="text-blue-500 hover:underline hover:cursor-pointer">
+                            Lihat Lokasi
+                        </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Ambil elemen modal dan gambar modal
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const closeBtn = document.querySelector(".close");
+
+        // Ambil semua gambar testimoni
+        const testimoniImgs = document.querySelectorAll(".testimoni-img");
+
+        // Tambahkan event listener ke setiap gambar
+        testimoniImgs.forEach(img => {
+            img.addEventListener("click", function () {
+                modal.style.display = "block"; // Tampilkan modal
+                modalImg.src = this.src; // Set gambar modal sesuai dengan gambar yang diklik
+            });
+        });
+
+        // Tambahkan event listener untuk tombol close
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none"; // Sembunyikan modal
+        });
+
+        // Tutup modal jika mengklik di luar gambar
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+    <script>
+        function lokasi() {
+            window.open("https://maps.app.goo.gl/swYUZbKEYQSx5XZ3A", "_blank");
+
+        }
+    </script>
+
+    <!-- <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }); -->
+    </script>
+    <script>
+        let currentBanner = 0;
+        const banners = document.querySelectorAll('.banner');
+        const totalBanners = banners.length;
+
+        function changeBanner(index) {
+            banners[currentBanner].classList.remove('active'); // Hilangkan efek aktif dari banner saat ini
+            setTimeout(() => {
+                banners[currentBanner].classList.add('hidden'); // Sembunyikan setelah animasi selesai
+                banners[index].classList.remove('hidden'); // Tampilkan banner berikutnya
+                setTimeout(() => {
+                    banners[index].classList.add('active'); // Tambahkan efek aktif setelah sedikit delay
+                }, 10);
+                currentBanner = index;
+            }, 200); // Sesuaikan dengan durasi animasi (1s)
+        }
+
+        // Fungsi untuk mengganti banner secara otomatis setiap 5 detik
+        function autoChangeBanner() {
+            setInterval(() => {
+                let nextBanner = (currentBanner + 1) % totalBanners;
+                changeBanner(nextBanner);
+            }, 5000);
+        }
+
+        // Tambahkan class 'active' ke banner pertama saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", () => {
+            banners[currentBanner].classList.add("active");
+            autoChangeBanner();
+        });
+    </script>
+    <script>
+        function kirimPesan(namaMobil) {
+            let nomorWA = "6282277093636";
+            let pesan = `Saya ingin mengorder mobil *${namaMobil}* apakah masih tersedia?`;
+            let urlMobile = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+            let urlWeb = `https://web.whatsapp.com/send?phone=${nomorWA}&text=${encodeURIComponent(pesan)}`;
+            let urlDesktop = `whatsapp://send?phone=${nomorWA}`; // WhatsApp Desktop tanpa teks otomatis
+
+            if (window.innerWidth > 768) {
+                let pilih = confirm("Klik OK untuk WhatsApp Desktop, Cancel untuk WhatsApp Web.");
+
+                if (pilih) {
+                    // Jika WhatsApp Desktop dipilih, copy teks dan buka aplikasi
+                    navigator.clipboard.writeText(pesan).then(() => {
+                        alert("Pesan telah disalin. Silakan paste di WhatsApp Desktop.");
+                        window.location.href = urlDesktop;
+                    });
+                } else {
+                    window.location.href = urlWeb;
+                }
+            } else {
+                window.location.href = urlMobile;
+            }
+        }
+
+    </script>
+    <script>
+        const navbar = document.getElementById("navbar");
+        const menuBtn = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Fungsi untuk mengecek posisi scroll dan menyembunyikan navbar jika di atas
+        function checkScroll() {
+            if (window.scrollY === 0) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
+            }
+        }
+
+        // Panggil saat halaman dimuat
+        document.addEventListener("DOMContentLoaded", checkScroll);
+
+        // Tambahkan event listener untuk mendeteksi scroll
+        window.addEventListener("scroll", checkScroll);
+
+        // Toggle Menu Mobile
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>

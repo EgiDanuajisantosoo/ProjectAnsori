@@ -1,0 +1,185 @@
+#more-arrows:hover .arrow-bottom {
+    transform: translateY(-18px);
+    transition: transform 0.2s ease-out;
+}
+
+#more-arrows:hover .arrow-top {
+    transform: translateY(18px);
+    transition: transform 0.2s ease-out;
+}
+
+.banner {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.banner.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* Mencegah scroll horizontal */
+    width: 100%;
+    /* Memastikan elemen mengambil lebar penuh */
+}
+
+ /* .testimoni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #b6c2d4; */
+    /* width: ; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* height: 100vh; */
+/* } */
+
+/* .carousel {
+    overflow: hidden;
+    width: 100%;
+    background-color: #89a2b6;
+    padding: 30px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    box-shadow: 20px 35px 35px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: animation 50s linear infinite;
+}
+
+.image-container img {
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid #a5b1c2;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-10 * 250px));
+    }
+}
+ */
+
+
+
+
+
+
+
+ .testimoni {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #b6c2d4; */
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    /* background-color: #89a2b6; */
+    padding: 30px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    box-shadow: 20px 35px 35px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: animation 50s linear infinite;
+}
+
+.image-container img {
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid #a5b1c2;
+    cursor: pointer;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-10 * 250px));
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%; /* Lebar maksimum gambar */
+        max-height: 80vh; /* Tinggi maksimum gambar */
+        border-radius: 10px; /* Tambahkan border radius jika diperlukan */
+        object-fit: contain; /* Pastikan gambar tidak terdistorsi */
+        position: absolute; /* Posisikan gambar secara absolut */
+        top: 50%; /* Geser ke 50% dari atas */
+        left: 50%; /* Geser ke 50% dari kiri */
+        transform: translate(-50%, -50%); /* Geser kembali ke tengah */
+    }
+
+    .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px; /* Ukuran tombol close lebih kecil pada mobile */
+    }
+}

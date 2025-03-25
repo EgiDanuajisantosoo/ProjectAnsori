@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar dengan Custom Hover</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+    <div id="banner-container">
+        <!-- Banner 1 -->
+        <div class="banner min-h-screen pt-[80px] pb-[10px] bg-gray-200 flex flex-col items-center text-center">
+            <h1 class="text-[#2C3E50] text-3xl font-bold">Batik Holiday - Sewa Mobil Mudah & Terpercaya!</h1>
+            <p class="text-[#333333] text-[15px] mt-2 font-serif max-w-[600px]">
+                Tersedia berbagai pilihan kendaraan untuk perjalanan nyaman anda. Kami juga menyediakan paket wisata
+                daerah
+                Medan untuk pengalaman liburan yang tak terlupakan.
+            </p>
+            <a href="daftarRental.html">
+                <button class="flex bg-[#E67E22] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer 
+                   hover:scale-110 hover:shadow-lg transition-transform duration-300">
+                    <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                    <p class="text-[#34495E] ml-[2px] font-bold">Pesan Sekarang</p>
+                </button>
+            </a>
+
+            <div class="bannerMobil mt-10">
+                <img src="../img/Mobil.png" class="max-w-full h-auto" alt="mobil1">
+            </div>
+            <!-- <button onclick="changeBanner(1)" class="bg-[#E67E22] px-4 py-2 mt-10 rounded-[50px]">Lihat Lainnya</button> -->
+        </div>
+
+        <!-- Banner 2 -->
+        <div class="banner relative min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center hidden"
+            style="background-image: url('../img/banner/banner2.jpg');">
+
+            <!-- Overlay lebih gelap -->
+            <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+            <!-- Content -->
+            <div class="relative max-w-2xl p-6 text-white">
+                <h1 class="text-white text-3xl font-bold">PAKET WISATA MEDAN</h1>
+                <p class="text-white text-[15px] mt-2 font-serif">
+                    Medan adalah destinasi wisata yang kaya akan budaya, kuliner, dan keindahan alam.
+                    Untuk Anda yang ingin menjelajahi pesona kota ini tanpa repot, Rudi Rental Medan
+                    menawarkan berbagai pilihan paket wisata dengan harga terjangkau dan layanan terbaik.
+                    Dengan armada kendaraan yang nyaman serta pemandu wisata berpengalaman, perjalanan
+                    Anda bersama keluarga atau teman akan lebih menyenangkan dan berkesan.
+                    Nikmati pengalaman liburan yang seru di kota yang dikenal sebagai
+                    <i>“Paris van Sumatera”</i> dengan pelayanan profesional dari kami.
+                </p>
+
+                <!-- Tombol dengan warna lebih kontras -->
+                <a href="daftarRental.html">
+                    <button
+                        class="flex bg-[#E67E22] mt-6 inline-flex items-center px-4 py-2 mt-10 rounded-[50px] hover:bg-[#D35400] hover:cursor-pointer hover:scale-110 hover:shadow-lg transition-transform duration-300">
+                        <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                        <p class="text-white ml-[2px] font-bold">Pesan Sekarang</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Toggle menu mobile
+        document.getElementById("mobile-menu-button").addEventListener("click", function () {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+    <style>
+        /* Efek Hover */
+        .nav-link {
+            @apply text-black relative px-3 py-1 transition-all duration-300;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: gray;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-link:hover {
+            @apply text-gray-600;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Image Lightbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .body{
+            font-family: "roboto",cursive;
+            height: 100vh;
+            background-color: #F6F1F8;
+        }
+
+        .container{
+            overflow: hidden;
+            height: 360px;
+            margin: 10px;
+        }
+
+        .container img {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
+            transition: all 0.3s ease-out;
+            /* border: 1px solid #a5b1c2; */
+        }
+
+        .gallery {
+            background-color: #f2f2f2;
+            margin: 60px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 12px 45px 45px rgba(0, 0, 0, 0.6);
+        }
+
+        .gallery img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        .caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: auto;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="container">
+            <img src="../img/mobil2.jpg" alt="Nature is the art of God.">
+        </div>
+        <div class="container">
+            <img src="../img/mobil2.jpg" alt="Nature is the art of God.">
+        </div>
+        <div class="container">
+            <img src="../img/mobil2.jpg" alt="Nature is the art of God.">
+        </div>
+        <div class="container">
+            <img src="../img/mobil2.jpg" alt="Nature is the art of God.">
+        </div>
+        <div class="container">
+            <img src="../img/mobil2.jpg" alt="Nature is the art of God.">
+        </div>
+    </div>
+
+    <div class="modal">
+        <span class="close">×</span>
+        <img class="modal-content full-img" id="img01" alt="Enlarged view">
+        <p class="caption"></p>
+    </div>
+
+    <script>
+        const modal = document.querySelector(".modal");
+        const previews = document.querySelectorAll(".gallery img");
+        const original = document.querySelector(".full-img");
+        const caption = document.querySelector(".caption");
+        const closeBtn = document.querySelector(".close");
+
+        previews.forEach(preview => {
+            preview.addEventListener("click", () => {
+                modal.style.display = "block";
+                original.src = preview.src;
+                caption.innerHTML = preview.alt;
+            });
+        });
+
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

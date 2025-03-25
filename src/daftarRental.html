@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Daftar Mobil</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        #textPromosi {
+            min-height: 60px;
+        }
+
+        #nomorPromosi {
+            min-height: 40px;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+    </script>
+</head>
+
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+
+    <!-- Daftar Mobil -->
+    <div class="daftarMobil min-h-screen bg-gray-50 flex flex-col items-center text-center pt-[80px] pb-[10px] ">
+        <!-- Judul -->
+        <h1 data-aos="zoom-in-down" class="text-[30px] text-[#2C3E50] font-serif font-bold">Pilihan Sewa Rental Mobil
+            Medan</h1>
+        <p data-aos="zoom-in-up" class="text-[15px] text-[#333333] max-w-[800px] font-serif mt-2">
+            Rudi Rental Car menawarkan berbagai pilihan kendaraan untuk disewa, mulai dari mobil mewah hingga bus, siap
+            memenuhi segala kebutuhan perjalanan Anda. Temukan mobil terbaik yang sesuai dengan kenyamanan dan gaya
+            perjalanan Anda! Berikut adalah deretan kendaraan unggul yang kami sediakan.
+        </p>
+
+        <!-- Contain Cards -->
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+            <div data-aos="zoom-in-right" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/innova.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Innova Reborn</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2018 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.100.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Innova Reborn')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/avanza.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Avanza </h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2019 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 850.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Avanza')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/fortuner.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Fortuner PRZ </h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2020 up
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.500.000 / Hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Fortuner PRZ')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/pajero.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Pajero</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2018 sd 2024
+                        </p>
+                        <p class="text-black font-bold">-</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Pajero')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-right" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/Alphard.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Alphard</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2019 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp 3.500.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Alphard')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="flip-right" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/Hiace comuter.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Hiace Comuter</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2018 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.500.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Hiace Comuter')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="flip-right" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/Hiace Premio.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara"
+                        class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">Hiace Premio</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            2018 sd 2024
+                        </p>
+                        <p class="text-black font-bold">Rp. 1.800.000 / hari</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('Hiace Premio')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="zoom-in-left" class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar -->
+                <div class="relative">
+                    <img src="../img/mobil/elf.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full">
+                    <!-- SVG untuk efek border melengkung -->
+                    <svg class="absolute bottom-[-1px] left-0 w-full" viewBox="0 0 500 50"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,40 C150,60 350,0 600,50 L200,80 L0,60 Z" fill="#969696"></path>
+                    </svg>
+                </div>
+                <!-- Konten -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-black text-lg font-semibold">ELF</h2>
+                        <p class="text-xs text-center font-bold text-gray-500">
+                            -
+                        </p>
+                        <p class="text-black font-bold">-</p>
+                    </div>
+                    <p class="mt-2 text-sm font-semibold">Fasilitas yang didapat termasuk:</p>
+                    <ul class="text-sm text-gray-700">
+                        <li><i class="fa-solid fa-id-card"></i> Driver Berpengalaman</li>
+                        <li><i class="fa-solid fa-car"></i> Unit Kendaraan</li>
+                        <li><i class="fa-solid fa-gas-pump"></i> Bahan Bakar Minyak (BBM)</li>
+                    </ul>
+                    <p class="text-xs text-center text-gray-500 mt-2">
+                        *Untuk pemakaian luar kota hubungi kami. Batik Holiday tidak melayani lepas kunci
+                    </p>
+                    <div class="flex justify-center">
+                        <button onclick="kirimPesan('ELF')" class="flex justify-center items-center bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:bg-[#ff7f00] hover:cursor-pointer w-auto 
+                            transition-transform duration-300 hover:scale-110 group">
+
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#314c8f] ml-[2px] font-bold group-hover:text-white">Pesan Sekarang</p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner min-h-auto bg-gray-200">
+        <div class="flex flex-col md:flex-row items-center justify-between px-6 md:px-10 py-10">
+            <!-- Bagian Teks -->
+            <div class="max-w-[100vh] text-center md:text-left">
+                <h1 class="text-[21px] md:text-[44px] sm:text-[32px] text-[#2C3E50] font-bold font-serif mb-4 min-h-[60px]"
+                    id="textPromosi">
+                </h1>
+                <h1 class="text-[18px] md:text-[30px] sm:text-[22px] font-bold text-[#333333] min-h-[40px]"
+                    id="nomorPromosi">
+                </h1>
+
+            </div>
+
+            <!-- Bagian Gambar -->
+            <div data-aos="fade-left"
+                class="relative w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0 md:mr-10">
+                <img src="../img/Group 35.png" alt="Mobil"
+                    class="relative max-w-full w-[80%] sm:w-[70%] md:w-[650px] h-auto object-contain">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script>
+        var i1 = 0, i2 = 0;
+        var txt1 = 'Hubungi kami dan dapatkan penawaran menarik dengan harga yang terjangkau';
+        var txt2 = '0812-3456-7891';
+        var speed = 50; // Kecepatan mengetik dalam milidetik
+        var delayBeforeRestart = 1000; // Jeda sebelum mengulang animasi
+
+        function typeWriter1() {
+            if (i1 < txt1.length) {
+                document.getElementById("textPromosi").innerHTML += txt1.charAt(i1);
+                i1++;
+                setTimeout(typeWriter1, speed);
+            } else {
+                // Setelah selesai, mulai typeWriter2
+                setTimeout(typeWriter2, delayBeforeRestart);
+            }
+        }
+
+        function typeWriter2() {
+            if (i2 < txt2.length) {
+                document.getElementById("nomorPromosi").innerHTML += txt2.charAt(i2);
+                i2++;
+                setTimeout(typeWriter2, speed);
+            } else {
+                // Setelah selesai, ulang kembali semuanya dari awal
+                setTimeout(() => {
+                    document.getElementById("textPromosi").innerHTML = "";
+                    document.getElementById("nomorPromosi").innerHTML = "";
+                    i1 = 0;
+                    i2 = 0;
+                    typeWriter1(); // Mulai ulang dari awal
+                }, delayBeforeRestart);
+            }
+        }
+
+        // Jalankan otomatis saat halaman dimuat
+        window.onload = function () {
+            typeWriter1(); // Mulai mengetik kalimat pertama
+        };
+    </script>
+
+    <script>
+        function kirimPesan(namaMobil) {
+            let nomorWA = "+6282277093636";
+            let pesan = `Saya ingin mengorder mobil *${namaMobil}* apakah masih tersedia?`;
+
+            let url = `https://api.whatsapp.com/send?phone=${nomorWA}&text=${encodeURIComponent(pesan)}`;
+
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
