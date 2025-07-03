@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Paket Wisata</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        #textPromosi {
+            min-height: 60px;
+        }
+
+        #nomorPromosi {
+            min-height: 40px;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                 <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+
+
+
+    <div class=" mt-6 md:p-[100px] p-[50px]">
+        <h1 class="text-2xl font-bold mb-4 mt-4">Paket Wisata</h1>
+        <div class="flex flex-col gap-6">
+            <!-- Item Wisata -->
+            <a href="DetailPaketWisata.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan Danau Toba 2 Hari 1 Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500 text-center md:text-left lg:text-left">Nikmati liburan seru dan menyenangkan bersama Batik Holiday dengan Paket Tour Medan-Danau Toba 2 Hari 1 Malam (2D1N). Kami menawarkan perjalanan wisata yang nyaman dan berkesan, mengunjungi berbagai destinasi unggulan di Sumatera Utara dengan pelayanan terbaik dan harga yang terjangkau.
+                    </p>
+                </div>
+            </div>
+            </a>
+            <a href="DetailPaketWisata2.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan – Danau Toba 3 Hari 2  Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500 text-center md:text-left lg:text-left">Nikmati pengalaman wisata tak terlupakan bersama Batik Holiday dengan paket perjalanan ke destinasi terbaik di Sumatera Utara. Dengan layanan profesional dan harga terjangkau, kami siap memberikan pengalaman liburan yang nyaman dan menyenangkan.
+                    </p>
+                </div>
+            </div>
+            </a>
+            <!-- <a href="DetailPaketWisata3.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan Danau Toba 2 Hari 1 Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500">Nikmati liburan seru dan menyenangkan bersama Batik Holiday dengan Paket Tour Medan-Danau Toba 2 Hari 1 Malam (2D1N). Kami menawarkan perjalanan wisata yang nyaman dan berkesan, mengunjungi berbagai destinasi unggulan di Sumatera Utara dengan pelayanan terbaik dan harga yang terjangkau.
+                    </p>
+                </div>
+            </div>
+            </a> -->
+            <a href="DetailPaketWisata3.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan – Danau Toba 4 Hari 3 Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500 text-center md:text-left lg:text-left">Paket Tour Medan Danau Toba Terlaris 4D3N - Batik Holiday
+                        Paket wisata ini merupakan pilihan terbaik bagi Anda yang ingin menikmati keindahan Danau Toba dan destinasi unggulan lainnya di Sumatera Utara. Dengan harga terjangkau dan pelayanan profesional, Batik Holiday siap menemani perjalanan Anda.
+                    </p>
+                </div>
+            </div>
+            </a>
+            <a href="DetailPaketWisata4.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan – Danau Toba 5 Hari 4 Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500 text-center md:text-left lg:text-left">Paket Wisata Medan 5 Hari 4 Malam Paling Lengkap
+                        Nikmati perjalanan wisata terbaik bersama Batik Holiday dengan Paket Wisata Medan 5 Hari 4 Malam. Perjalanan ini mencakup berbagai destinasi unggulan di Danau Toba, Pulau Samosir, Berastagi, dan Kota Medan.
+                    </p>
+                </div>
+            </div>
+            </a>
+            <!-- <a href="DetailPaketWisata5.html" class="">
+            <div class=" bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center gap-6 w-auto ">
+                <img src="../img/artikel/danau toba.jpg" alt="Gambar Wisata" class="w-full h-full md:w-[25%] md:h-[25%] object-cover rounded-lg">
+                <div class="">
+                    <h2 class="text-center md:text-left text-lg font-semibold">Paket Tour Medan Danau Toba 2 Hari 1 Malam Bersama Batik Holiday</h2>
+                    <p class="text-gray-500">Nikmati liburan seru dan menyenangkan bersama Batik Holiday dengan Paket Tour Medan-Danau Toba 2 Hari 1 Malam (2D1N). Kami menawarkan perjalanan wisata yang nyaman dan berkesan, mengunjungi berbagai destinasi unggulan di Sumatera Utara dengan pelayanan terbaik dan harga yang terjangkau.
+                    </p>
+                </div>
+            </div>
+            </a> -->
+        </div>
+    </div>
+    <div class="buttonFab fixed bottom-10 right-3">
+        <a href="daftarRental.html" class="button">
+            <a href="https://api.whatsapp.com/send?phone=6282277093636" class="flex bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer  hover:bg-[#ff7f00]
+               hover:scale-110 hover:shadow-lg transition-transform duration-300 group">
+                <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                <p class="text-[#34495E] ml-[2px] font-bold hidden group-hover:text-white group-hover:flex">Hubungi</p>
+            </button>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

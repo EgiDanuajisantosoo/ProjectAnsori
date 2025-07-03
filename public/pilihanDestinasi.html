@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Pilihan Destinasi</title>
+</head>
+<body class="bg-gray-100">
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                 <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+
+    <!-- Daftar Mobil -->
+    <div class="daftarMobil min-h-screen bg-gray-50 flex flex-col items-center text-center pt-[80px] pb-[10px] ">
+        <!-- Judul -->
+        <h1 class="text-[30px] text-[#2C3E50] font-serif font-bold">Pilihan Destinasi Wisata Sumatra</h1>
+        <p class="text-[15px] text-[#333333] max-w-[800px] font-serif mt-2">
+            Batik Holiday kini siap mengantar Anda ke berbagai destinasi wisata Medan dengan kendaraan nyaman dan layanan profesional. Jelajahi keindahan Medan dengan perjalanan yang praktis dan menyenangkan!
+        </p>
+
+        <!-- Contain Cards -->
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/aek sijorni-tapanuli selatan-sumatera utara.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif ">Aek sijorni-tapanuli,<br> Selatan - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                    <!-- <div class="flex justify-center">
+                        <button
+                            class="flex justify-center items-center bg-[#E67E22] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer w-auto">
+                            <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                            <p class="text-[#34495E] ml-[2px] font-bold">Pesan Sekarang</p>
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/air terjun efrata-kabupaten samosir-sumatera utara.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Air Terjun Efrata,<br>Kabupaten Samosir-Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/gedung_london_sumatera_tujuan_wisata_sekaligus_peninggalan_sejarah_img0.png" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Gedung London,<br>Kota Medan - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/pemandian air soda tarutung-tapanuli utara.JPG" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Pemandian Air Soda,<br>Tarutung - Tapanuli Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/bukit sibeabea. danau tobajpg.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Bukit Sibeabea,<br>Kabupaten Samosir - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/marcel-ardivan-dxk7M7sIvRA-unsplash.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Danau Toba,<br>Kabupaten Toba - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/jam gadang -bukit tinggi.-suamtera baratjpg.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Jam Gadang,<br>Bukit Tinggi - Sumatera Barat</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/kolam abadi palaruga-kabupaten langkat-sumatera utara.JPG" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Kolam Abadi Palaruga,<br>Kabupaten Langkat - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/Masjid Raya Syekh Ahmad Khatib Al-Minangkabawi Sumatera Barat.JPG" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Masjid Raya Syekh Ahmad Khatib Al-Minangkabawi,<br>Kota Padang - Sumatera Barat</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/mesjid raya baiturahman-kota banda aceh-aceh.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Mesjid Raya Baiturahman,<br>Kota Banda Aceh - Aceh</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/mesjid raya-kota medan-sumatera utara.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Mesjid Raya,<br>Kota Medan - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/museum tsunami aceh-kota banda aceh-aceh.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Museum Tsunami Aceh,<br>Kota Banda Aceh - Aceh</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg w-[320px] text-left overflow-hidden">
+                <!-- Gambar mengambil lebar penuh -->
+                <img src="../img/artikel/sibolga.jpg" alt="Si Gale - Gale, Pulau Samosir, Sumatera Utara" class="w-full rounded-t-lg  h-[350px]">
+        
+                <!-- Konten dengan padding -->
+                <div class="p-5">
+                    <div class="text-center">
+                        <h2 class="text-[#2C3E50] text-lg font-serif">Sibolga,<br>Kabupaten Tapanuli Tengah - Sumatera Utara</h2>
+                        <!-- <p class="text-[#2C3E50] font-bold">Rp. 4.000.000 / hari</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttonFab fixed bottom-10 right-3">
+        <a href="daftarRental.html" class="button">
+            <a href="https://api.whatsapp.com/send?phone=6282277093636" class="flex bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer  hover:bg-[#ff7f00]
+               hover:scale-110 hover:shadow-lg transition-transform duration-300 group">
+                <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                <p class="text-[#34495E] ml-[2px] font-bold hidden group-hover:text-white group-hover:flex">Hubungi</p>
+            </button>
+        </a>
+    </div>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

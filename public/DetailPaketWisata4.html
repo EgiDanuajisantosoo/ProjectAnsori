@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Detail Paket Wisata</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        #textPromosi {
+            min-height: 60px;
+        }
+
+        #nomorPromosi {
+            min-height: 40px;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="navbar" class="bg-white fixed w-full z-10 transition-all duration-300 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold">
+                <img src="../img/Logo.png" alt="Logo" class="h-[55px] w-[75px] ml-3 mix-blend-multiply">
+            </div>
+            <!-- Menu untuk Desktop -->
+            <div class="hidden md:flex space-x-6 mr-3">
+                <a href="index.html" class="nav-link hover:text-gray-500">Home</a>
+                <a href="pilihanDestinasi.html" class="nav-link hover:text-gray-500">Destinasi</a>
+                <a href="PaketWisata.html" class="nav-link hover:text-gray-500">Paket Wisata</a>
+                <a href="daftarRental.html" class="nav-link hover:text-gray-500">Sewa Mobil</a>
+                <a href="artikelWisata.html" class="nav-link hover:text-gray-500">Artikel</a>
+                <a href="tetang.html" class="nav-link hover:text-gray-500">Tentang</a>
+            </div>
+
+            <!-- Tombol Menu Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center bg-white py-4 shadow-md">
+            <a href="index.html" class="nav-link block">Home</a>
+            <a href="pilihanDestinasi.html" class="nav-link block">Destinasi</a>
+            <a href="PaketWisata.html" class="nav-link block">Paket Wisata</a>
+            <a href="daftarRental.html" class="nav-link block">Sewa Mobil</a>
+            <a href="artikelWisata.html" class="nav-link block">Artikel</a>
+            <a href="tentang.html" class="nav-link block">Tentang</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 mt-6">
+        <h1 class="text-3xl font-bold mb-6">Paket Wisata</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Paket Tour Medan - Danau Toba 3 Hari <br> 2 Malam Bersama Batik Holiday
+            </h2>
+            <img src="../img/artikel/sibolga.jpg" alt="Gambar Wisata" class="w-full h-full rounded-lg mb-4">
+
+            <p>
+                Paket Wisata Medan 5 Hari 4 Malam Paling Lengkap
+                Nikmati perjalanan wisata terbaik bersama Batik Holiday dengan Paket Wisata Medan 5 Hari 4 Malam.
+                Perjalanan ini mencakup berbagai destinasi unggulan di Danau Toba, Pulau Samosir, Berastagi, dan Kota
+                Medan.
+            </p><br>
+
+                <p class="text-2xl"><b>Hari 1: Kedatangan di Medan - Siantar - Parapat (Danau Toba)</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Penjemputan di Bandara Kualanamu oleh tim Batik Holiday.</li>
+                    <li>Perjalanan menuju Parapat Danau Toba melalui Siantar, dengan pemandangan perkebunan sawit dan karet.</li>
+                    <li>Singgah di Toko Paten, pusat oleh-oleh khas Siantar.</li>
+                    <li>Check-in hotel di Parapat, makan malam di restoran lokal dengan hiburan musik tradisional Batak.</li>
+                    <li>Istirahat dan acara bebas.</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Hari 2: Kaldera Toba - Pulau Samosir</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Sarapan di hotel, foto di Pantai Bebas Parapat dengan latar belakang I LOVE DANAU TOBA.</li>
+                    <li>Kunjungan ke Desa Pardamean Sibisa, menikmati pemandangan The Kaldera Toba Nomadic Escape.</li>
+                    <li>Menikmati keindahan Air Terjun Bukit Gibeon.</li>
+                    <li>Makan siang di restoran lokal.</li>
+                    <li>Menyeberang ke Pulau Samosir dengan kapal ferry.</li>
+                    <li>Mengunjungi Desa Tomok (Rumah Adat Batak, Patung Sigale-gale, Makam Raja Sidabutar).</li>
+                    <li>Mengunjungi Kampung Siallagan, situs sejarah Batak.</li>
+                    <li>Check-in hotel di Samosir, makan malam, istirahat.</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Hari 3: Eksplorasi Pulau Samosir</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Sarapan pagi di hotel.</li>
+                    <li>Berkunjung ke Bukit Holbung, menikmati panorama savana hijau dan Danau Toba.</li>
+                    <li>Menyaksikan keindahan Air Terjun Efrata.</li>
+                    <li>Kunjungan ke Bukit Sibea-Bea, melihat patung Yesus raksasa - Makan siang di restoran lokal.</li>
+                    <li>Mengunjungi Pantai Batu Hoda.</li>
+                    <li>Kembali ke hotel, makan malam, istirahat.</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Hari 4: Simarjarunjung - Taman Simalem Resort - Berastagi</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Sarapan dan check-out hotel.</li>
+                    <li>Menyeberang dari Samosir ke Tigaras.</li>
+                    <li>Perjalanan menuju Taman Simalem Resort melalui Bukit Indah Simarjarunjung, mencicipi pisang goreng dan
+                        teh jahe khas Simalungun (biaya sendiri).</li>
+                    <li>Singgah di Air Terjun Sipiso-piso, air terjun tertinggi di Sumatera Utara.</li>
+                    <li>Makan siang di Taman Simalem Resort.</li>
+                    <li>Perjalanan ke Berastagi, kota wisata berhawa sejuk.</li>
+                    <li>Check-in hotel, makan malam di restoran lokal, istirahat.</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Hari 5: Berastagi - Medan - Bandara</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Sarapan di hotel dan check-out.</li>
+                    <li>Mengunjungi Farm Gundailing, melihat peternakan sapi perah dan produksi keju.</li>
+                    <li>Mengunjungi Pagoda Taman Lumbini, replika Pagoda Shwedagon Myanmar.</li>
+                    <li>Belanja oleh-oleh di Pasar Buah Berastagi.</li>
+                    <li>Perjalanan ke Kota Medan melalui Sembahe (durasi ±2 jam).</li>
+                    <li>City tour Medan: Masjid Raya Al-Mashun, Istana Maimun, Vihara Gunung Timur (bagi yang beragama Buddha),Kuil Sri Mariamman (bagi yang beragama Hindu).</li>
+                    <li>Menikmati durian Ucok/Pancake Durian (biaya sendiri).</li>
+                    <li>Wisata edukasi ke Rumah Noerlen, melihat proses pembuatan sirup markisa tradisional.</li>
+                    <li>Belanja oleh-oleh khas Medan: Bika Ambon, Bolu Meranti, Pancake Durian.</li>
+                    <li>Pengantaran ke Bandara Kualanamu. Tour selesai!</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Fasilitas Termasuk:</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Hotel sesuai pilihan (sekamar berdua/bertiga).</li>
+                    <li>Makan sesuai program (halal food).</li>
+                    <li>Transportasi full AC.</li>
+                    <li>Tiket masuk objek wisata.</li>
+                    <li>Ferry penyebrangan Parapat - Samosir PP.</li>
+                    <li>Air mineral.</li>
+                    <li>Driver merangkap guide.</li>
+                    <li>Wisata edukasi ke Rumah Noerlen, melihat proses pembuatan sirup markisa tradisional.</li>
+                    <li>Belanja oleh-oleh khas Medan: Bika Ambon, Bolu Meranti, Pancake Durian.</li>
+                    <li>Pengantaran ke Bandara Kualanamu. Tour selesai!</li>
+                  </ol>
+                <br>
+                <br>
+                <p class="text-2xl"><b>Fasilitas Tidak Termasuk:</b></p>
+                <ol class="list-decimal ml-8">
+                    <li>Tiket pesawat & airport tax.</li>
+                    <li>Pengeluaran pribadi.</li>
+                    <li>Optional tour.</li>
+                    <li>Tipping driver/guide.</li>
+                  </ol>
+                <br>
+
+                <p>- Semua paket tour ini telah kami kemas dengan harga yang bersahabat tanpa mengurangi kualitas layanan.
+                    Kami selalu mengutamakan kenyamanan dan kepuasan pelanggan dalam setiap perjalanan yang kami rancang.</p>
+                <br>
+                <br>
+
+                <p class="text-2xl"><b>INFORMASI & PEMESANAN</b></p>
+                <p>Untuk informasi lebih lanjut dan pemesanan paket wisata ini, silakan hubungi Batik Holiday:
+                    📞 Telepon/WhatsApp: 081375637600 / 081370134573 📧 Email: [masukkan email di sini] 📍 Alamat:
+                    [masukkan alamat kantor di sini]</p>
+                <br>
+                <p class="text-center font-bold text-xl">Nikmati perjalanan wisata yang seru dan berkesan bersama Batik Holiday!</p>
+        </div>
+    </div>
+    <div class="buttonFab fixed bottom-10 right-3">
+        <a href="daftarRental.html" class="button">
+            <a href="https://api.whatsapp.com/send?phone=6282277093636" class="flex bg-[#fee271] px-4 py-2 mt-10 rounded-[50px] hover:cursor-pointer  hover:bg-[#ff7f00]
+               hover:scale-110 hover:shadow-lg transition-transform duration-300 group">
+                <img src="../img/Group 4.png" alt="icon" class="w-6 h-6">
+                <p class="text-[#34495E] ml-[2px] font-bold hidden group-hover:text-white group-hover:flex">Hubungi</p>
+            </button>
+        </a>
+    </div>
+
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

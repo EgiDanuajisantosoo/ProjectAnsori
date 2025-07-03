@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Slider</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    body {
+      background: url(background.jpg) no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      gap: 10px;
+      overflow: hidden;
+      flex-wrap: wrap; /* Memastikan layout tetap rapi di layar kecil */
+      padding: 20px;
+    }
+
+    .slider img {
+      width: 8%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .slider img:hover {
+      width: 20%;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 1024px) {
+      .slider {
+        height: auto;
+        flex-wrap: wrap;
+      }
+      .slider img {
+        width: 8%;
+        height: 300px;
+      }
+      .slider img:hover {
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slider img {
+        width: 8%;
+        height: 250px;
+      }
+      .slider img:hover {
+        width: 35%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .slider {
+        gap: 5px;
+      }
+      .slider img {
+        width: 30%;
+        height: 200px;
+      }
+      .slider img:hover {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <img src="../img/mobil2.jpg" alt="Mobil 2">
+    <img src="../img/mobil3.jpg" alt="Mobil 3">
+    <img src="../img/mobil4.jpg" alt="Mobil 4">
+    <img src="../img/mobil5.jpg" alt="Mobil 5">
+    <img src="../img/mobil6.jpg" alt="Mobil 6">
+    <img src="../img/mobil7.jpg" alt="Mobil 7">
+    <img src="../img/mobil8.jpg" alt="Mobil 8">
+    <img src="../img/mobil9.jpg" alt="Mobil 9">
+    <img src="../img/mobil10.jpg" alt="Mobil 10">
+    <img src="../img/mobil11.jpg" alt="Mobil 11">
+  </div>
+
+  <script>
+    AOS.init(); // Inisialisasi animasi AOS
+  </script>
+</body>
+</html>
